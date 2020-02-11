@@ -9,6 +9,8 @@ async function run() {
   const payload = core.getInput('payload');
   const headers = core.getInput('headers');
 
+  core.info(`avoid_errors: ${avoid_errors}`);
+
   try { 
     const result = await request(url, method, payload, headers);
     core.setOutput('output', JSON.stringify(result.body));
@@ -18,6 +20,8 @@ async function run() {
       core.warning(error.message);
       return;
     }
+
+    core.info(`FAILED: ${avoid_errors}`);
 
     core.setFailed(error.message);
   }
