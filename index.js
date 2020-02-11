@@ -14,14 +14,12 @@ async function run() {
     core.setOutput('output', JSON.stringify(result.body));
   } 
   catch (error) {
-    if (avoid_errors == true) {
-      core.warning('Warning: ', error.message);
+    if (avoid_errors) {
+      core.warning(error.message);
       return;
     }
 
     core.setFailed(error.message);
-    
-    throw error;
   }
 }
 
