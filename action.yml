@@ -1,0 +1,27 @@
+name: 'Web Request Action'
+author: Dmitry Kostenevich
+description: 'Send Web Request'
+inputs:
+  url:
+    description: 'Web request URL endpoint'
+    required: true
+  method:
+    description: 'Web request method (`GET`, `POST`, `PUT`, `PATCH`, `DELETE`)'
+    required: true
+    default: GET
+  avoid_error:
+    description: 'Avoid any error'
+    required: true
+    default: false
+  payload:
+    description: Web request payload in JSON format
+    required: false
+  headers:
+    description: Web request headers in JSON format
+    required: false
+outputs:
+  output:
+    description: 'data output from the web request'
+runs:
+  using: node12
+  main: index.js

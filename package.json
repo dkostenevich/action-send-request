@@ -1,0 +1,35 @@
+{
+  "name": "action-send-request",
+  "version": "1.0.0",
+  "description": "Web Request Action",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint index.js",
+    "package": "ncc build index.js -o dist",
+    "test": "eslint index.js && jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dkostenevich/action-send-request.git"
+  },
+  "keywords": [
+    "GitHub",
+    "Actions",
+    "JavaScript"
+  ],
+  "author": "Dmitry Kostenevich",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dkostenevich/action-send-request/issues"
+  },
+  "homepage": "https://github.com/dkostenevich/action-send-request#readme",
+  "dependencies": {
+    "@actions/core": "^1.1.1",
+    "request-promise": "^4.2.5"
+  },
+  "devDependencies": {
+    "@zeit/ncc": "^0.20.5",
+    "eslint": "^6.3.0",
+    "jest": "^24.9.0"
+  }
+}
