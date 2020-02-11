@@ -1916,7 +1916,7 @@ const request = __webpack_require__(655);
 async function run() {
   const url = core.getInput('url');
   const method = core.getInput('method');
-  const avoid_error = core.getInput('avoid_error');
+  const avoid_errors = core.getInput('avoid_errors');
   const payload = core.getInput('payload');
   const headers = core.getInput('headers');
 
@@ -1925,7 +1925,7 @@ async function run() {
     core.setOutput('output', JSON.stringify(result.body));
   } 
   catch (error) {
-    if (avoid_error) {
+    if (avoid_errors) {
       core.warning('Warning: ', error.message);
       return;
     }
