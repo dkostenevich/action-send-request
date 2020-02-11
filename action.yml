@@ -24,4 +24,4 @@ outputs:
     description: 'data output from the web request'
 runs:
   using: node12
-  main: dist/index.js
+  main: 'dist/index.js'
