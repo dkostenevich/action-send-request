@@ -15,7 +15,7 @@ async function run() {
   } 
   catch (error) {
     if (avoid_errors) {
-      core.warning(error.message);
+      core.info(error.message);
       return;
     }
 
